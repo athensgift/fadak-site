@@ -74,6 +74,7 @@ h2{font-size:clamp(30px,4vw,44px);letter-spacing:-.025em;line-height:1.15;font-w
 .person p{color:var(--muted);font-size:15.5px}
 .person a.in{display:inline-block;margin-top:12px;font-size:14px;font-weight:600;border-bottom:1px solid var(--line)}
 .person a.in:hover{border-color:var(--text)}
+img.avatar{object-fit:cover;background:var(--line)}
 
 /* contact */
 .contact{text-align:center}
