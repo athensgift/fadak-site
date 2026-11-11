@@ -3,146 +3,62 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>FADAK — AI Transformation</title>
-<meta name="description" content="FADAK: εκπαίδευση σε εργαλεία AI, προσωπική καθοδήγηση και AI transformation για ανθρώπους και επιχειρήσεις.">
-<meta property="og:title" content="FADAK — AI Transformation">
-<meta property="og:description" content="Μαθαίνουμε σε ανθρώπους και ομάδες να χρησιμοποιούν το AI στην πράξη.">
+<title>FADAK — AI, Apps & Web</title>
+<meta name="description" content="FADAK: εκπαίδευση σε εργαλεία AI και καθοδήγηση, εφαρμογές για κινητά και ιστοσελίδες για ανθρώπους και επιχειρήσεις.">
+<meta property="og:title" content="FADAK — AI, Apps & Web">
+<meta property="og:description" content="Εκπαίδευση σε εργαλεία AI, εφαρμογές για κινητά και ιστοσελίδες.">
 <meta property="og:url" content="https://fadak.gr">
 <meta property="og:type" content="website">
-<link rel="canonical" href="https://fadak.gr">
+<link rel="canonical" href="https://fadak.gr/">
+<link rel="alternate" hreflang="el" href="https://fadak.gr/">
+<link rel="alternate" hreflang="en" href="https://fadak.gr/en/">
+<link rel="alternate" hreflang="x-default" href="https://fadak.gr/">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%230b0b0f'/><circle cx='16' cy='16' r='6' fill='%237c5cff'/></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-:root{
-  --bg:#fafaf9; --surface:#ffffff; --text:#0b0b0f; --muted:#5b5b66; --line:#e7e7ea;
-  --accent:#6d4aff; --accent-2:#00b3a4; --radius:18px; --max:1080px;
-}
-@media (prefers-color-scheme: dark){
-  :root{ --bg:#0b0b0f; --surface:#131318; --text:#f3f3f5; --muted:#a0a0ab; --line:#24242c; --accent:#8b72ff; --accent-2:#2fd3c4; }
-}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:Inter,system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
-a{color:inherit;text-decoration:none}
-.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
-
-/* nav */
-nav{position:sticky;top:0;z-index:10;backdrop-filter:blur(12px);background:color-mix(in srgb,var(--bg) 80%,transparent);border-bottom:1px solid var(--line)}
-nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
-.logo{font-weight:700;letter-spacing:.12em;font-size:18px;display:flex;align-items:center;gap:10px}
-.logo i{width:10px;height:10px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--accent-2))}
-nav ul{display:flex;gap:28px;list-style:none;font-size:15px;color:var(--muted)}
-nav ul a:hover{color:var(--text)}
-@media (max-width:640px){nav ul{display:none}}
-
-/* hero */
-.hero{padding:120px 0 96px;position:relative;overflow:hidden}
-.hero::before{content:"";position:absolute;inset:-40% -10% auto auto;width:640px;height:640px;border-radius:50%;
-  background:radial-gradient(circle,color-mix(in srgb,var(--accent) 28%,transparent),transparent 65%);filter:blur(20px);z-index:-1}
-.eyebrow{display:inline-block;font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);
-  border:1px solid color-mix(in srgb,var(--accent) 35%,transparent);padding:6px 12px;border-radius:999px;margin-bottom:28px}
-h1{font-size:clamp(40px,7vw,76px);line-height:1.05;letter-spacing:-.035em;font-weight:700;max-width:14ch}
-h1 span{background:linear-gradient(90deg,var(--accent),var(--accent-2));-webkit-background-clip:text;background-clip:text;color:transparent}
-.lead{font-size:clamp(18px,2.2vw,21px);color:var(--muted);max-width:56ch;margin:28px 0 40px}
-.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 24px;border-radius:999px;font-weight:600;font-size:16px;transition:transform .15s ease,opacity .15s}
-.btn:hover{transform:translateY(-1px)}
-.btn-primary{background:var(--text);color:var(--bg)}
-.btn-ghost{border:1px solid var(--line);margin-left:8px}
-
-/* sections */
-section{padding:96px 0;border-top:1px solid var(--line)}
-.label{font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
-h2{font-size:clamp(30px,4vw,44px);letter-spacing:-.025em;line-height:1.15;font-weight:700;max-width:22ch;margin-bottom:48px}
-
-.grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
-.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:32px;transition:border-color .2s,transform .2s}
-.card:hover{border-color:color-mix(in srgb,var(--accent) 50%,var(--line));transform:translateY(-2px)}
-.card .ico{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;margin-bottom:22px;
-  background:color-mix(in srgb,var(--accent) 12%,transparent);color:var(--accent)}
-.card h3{font-size:20px;letter-spacing:-.01em;margin-bottom:10px}
-.card p{color:var(--muted);font-size:15.5px}
-.card ul{list-style:none;margin-top:16px;display:grid;gap:6px;font-size:14.5px}
-.card li::before{content:"→ ";color:var(--accent)}
-.card.featured{grid-column:1/-1;display:grid;grid-template-columns:1.2fr 1fr;gap:32px;align-items:center;
-  background:linear-gradient(135deg,color-mix(in srgb,var(--accent) 10%,var(--surface)),var(--surface))}
-@media (max-width:760px){.card.featured{grid-template-columns:1fr}}
-.tags{display:flex;flex-wrap:wrap;gap:8px}
-.tags span{font-size:13.5px;padding:6px 12px;border-radius:999px;border:1px solid var(--line);background:var(--bg)}
-
-/* steps */
-.steps{display:grid;gap:0;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));counter-reset:s}
-.step{padding:28px 24px 28px 0;border-top:2px solid var(--line);position:relative}
-.step::before{counter-increment:s;content:"0" counter(s);font-size:14px;font-weight:600;color:var(--accent);display:block;margin-bottom:12px}
-.step h4{font-size:18px;margin-bottom:6px}
-.step p{color:var(--muted);font-size:15px}
-
-/* team */
-.team{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
-.person{display:flex;gap:20px;align-items:flex-start}
-.avatar{flex:none;width:64px;height:64px;border-radius:50%;display:grid;place-items:center;font-weight:700;font-size:20px;color:#fff;
-  background:linear-gradient(135deg,var(--accent),var(--accent-2))}
-.person h3{font-size:20px;margin-bottom:2px}
-.person .role{color:var(--accent);font-size:14px;font-weight:600;margin-bottom:10px}
-.person p{color:var(--muted);font-size:15.5px}
-.person a.in{display:inline-block;margin-top:12px;font-size:14px;font-weight:600;border-bottom:1px solid var(--line)}
-.person a.in:hover{border-color:var(--text)}
-
-/* contact */
-.contact{text-align:center}
-.contact h2{margin:0 auto 20px}
-.contact .lead{margin:0 auto 36px}
-footer{padding:40px 0;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
-footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
-
-.reveal{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s ease}
-.reveal.in{opacity:1;transform:none}
-@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <nav>
   <div class="wrap">
     <a href="#" class="logo"><i></i>FADAK</a>
+    <div class="nav-right">
     <ul>
-      <li><a href="#services">Υπηρεσίες</a></li>
+      <li><a href="#ai">AI</a></li>
+      <li><a href="#services">Apps & Web</a></li>
       <li><a href="#how">Πώς δουλεύουμε</a></li>
       <li><a href="#about">Ποιοι είμαστε</a></li>
       <li><a href="#contact">Επικοινωνία</a></li>
     </ul>
+    <a class="lang" href="en/" hreflang="en" lang="en">EN</a>
+    </div>
   </div>
 </nav>
 
 <header class="hero">
   <div class="wrap">
-    <span class="eyebrow">AI Transformation</span>
-    <h1>Το AI, <span>στην πράξη.</span></h1>
-    <p class="lead">Βοηθάμε ανθρώπους και επιχειρήσεις να μάθουν τα σωστά εργαλεία AI και να τα κάνουν κομμάτι της καθημερινότητάς τους — χωρίς hype, με απτά αποτελέσματα από την πρώτη εβδομάδα.</p>
+    <span class="eyebrow">AI · Apps · Web</span>
+    <h1><span>AI,</span> εφαρμογές και ιστοσελίδες.</h1>
+    <p class="lead">Βοηθάμε ανθρώπους και επιχειρήσεις να μάθουν τα εργαλεία AI και να τα χρησιμοποιούν στην καθημερινότητά τους. Φτιάχνουμε επίσης εφαρμογές για κινητά και ιστοσελίδες.</p>
     <a class="btn btn-primary" href="#contact">Ας μιλήσουμε →</a>
-    <a class="btn btn-ghost" href="#services">Τι κάνουμε</a>
+    <a class="btn btn-ghost" href="#ai">Τι κάνουμε</a>
   </div>
 </header>
 
-<section id="services">
+<section id="ai">
   <div class="wrap">
-    <p class="label reveal">Υπηρεσίες</p>
-    <h2 class="reveal">Από το «τι είναι αυτό;» στο «δεν δουλεύω χωρίς αυτό».</h2>
-
-    <div class="grid">
-      <article class="card featured reveal">
-        <div>
-          <div class="ico">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 7l10-5 10 5-10 5z"/><path d="M6 9.5V15c0 1.7 2.7 3 6 3s6-1.3 6-3V9.5"/></svg>
-          </div>
-          <h3>Εκμάθηση εργαλείων AI</h3>
-          <p>Πρακτικά workshops και μαθήματα — ατομικά ή για ομάδες. Μαθαίνετε να γράφετε σωστά prompts, να δουλεύετε με έγγραφα και δεδομένα, να αυτοματοποιείτε επαναλαμβανόμενες εργασίες και να ξέρετε πότε <em>δεν</em> πρέπει να εμπιστευτείτε το AI.</p>
+    <h2 class="reveal">AI</h2>
+    <p class="intro reveal">Το AI αλλάζει τον τρόπο που δουλεύουμε. Σας βοηθάμε να το μάθετε και να το χρησιμοποιείτε σωστά, χωρίς να χρειάζεστε τεχνικές γνώσεις.</p>
+    <div class="grid grid-3">
+      <article class="card reveal">
+        <div class="ico">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 7l10-5 10 5-10 5z"/><path d="M6 9.5V15c0 1.7 2.7 3 6 3s6-1.3 6-3V9.5"/></svg>
         </div>
-        <div class="tags">
-          <span>ChatGPT</span><span>Claude</span><span>Gemini</span><span>Microsoft Copilot</span>
-          <span>NotebookLM</span><span>Perplexity</span><span>AI agents</span><span>Αυτοματισμοί</span>
-        </div>
+        <h3>Εκμάθηση εργαλείων AI</h3>
+        <p>Πρακτικά μαθήματα, ατομικά ή για ομάδες: σωστά prompts, δουλειά με έγγραφα και δεδομένα, αυτοματοποίηση επαναλαμβανόμενων εργασιών.</p>
+        <ul><li>Workshops για ομάδες</li><li>Ατομικά μαθήματα</li><li>Online ή δια ζώσης</li></ul>
       </article>
 
       <article class="card reveal">
@@ -150,8 +66,8 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M16.2 7.8l-2.1 6.3-6.3 2.1 2.1-6.3z"/></svg>
         </div>
         <h3>Προσωπική καθοδήγηση</h3>
-        <p>1:1 coaching για να βάλετε το AI στη ζωή σας: στη δουλειά, στη μελέτη, στην οργάνωση της καθημερινότητας.</p>
-        <ul><li>Χάρτης αναγκών & στόχων</li><li>Εξατομικευμένο toolkit</li><li>Συνεδρίες follow-up</li></ul>
+        <p>1:1 συνεδρίες για να βάλετε το AI στη δουλειά, στη μελέτη και στην οργάνωση της καθημερινότητάς σας.</p>
+        <ul><li>Ανάλυση αναγκών</li><li>Εργαλεία στα μέτρα σας</li><li>Follow-up συνεδρίες</li></ul>
       </article>
 
       <article class="card reveal">
@@ -159,17 +75,37 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><path d="M17.5 14v7M14 17.5h7"/></svg>
         </div>
         <h3>AI για επιχειρήσεις</h3>
-        <p>Εντοπίζουμε πού το AI εξοικονομεί χρόνο στην ομάδα σας και το ενσωματώνουμε στις διαδικασίες που ήδη έχετε.</p>
-        <ul><li>Αξιολόγηση & roadmap</li><li>Εκπαίδευση ομάδων</li><li>Πολιτική ασφαλούς χρήσης</li></ul>
+        <p>Βρίσκουμε πού το AI εξοικονομεί χρόνο στην ομάδα σας και το ενσωματώνουμε στις διαδικασίες που ήδη έχετε.</p>
+        <ul><li>Αξιολόγηση & πλάνο</li><li>Custom assistants & αυτοματισμοί</li><li>Κανόνες ασφαλούς χρήσης</li></ul>
+      </article>
+    </div>
+    <div class="tags reveal">
+      <span>ChatGPT</span><span>Claude</span><span>Gemini</span><span>Microsoft Copilot</span><span>NotebookLM</span><span>AI agents</span>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <h2 class="reveal">Εφαρμογές & ιστοσελίδες</h2>
+
+    <div class="grid">
+      <article class="card reveal">
+        <div class="ico">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M11 18h2"/></svg>
+        </div>
+        <h3>Εφαρμογές για κινητά</h3>
+        <p>Native εφαρμογές για iPhone και Android, από τον σχεδιασμό μέχρι τη δημοσίευση στο App Store και στο Google Play.</p>
+        <ul><li>iOS & Android</li><li>Σχεδιασμός UI/UX</li><li>Δημοσίευση & συντήρηση</li></ul>
       </article>
 
       <article class="card reveal">
         <div class="ico">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 18l6-6-6-6"/><path d="M8 6l-6 6 6 6"/></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 9h20"/><path d="M6 6.5h.01M9 6.5h.01"/></svg>
         </div>
-        <h3>Λύσεις & εφαρμογές</h3>
-        <p>Όταν τα έτοιμα εργαλεία δεν φτάνουν, χτίζουμε: custom assistants, αυτοματισμούς και mobile/web εφαρμογές με AI.</p>
-        <ul><li>Custom GPTs & agents</li><li>Ενοποιήσεις συστημάτων</li><li>Mobile & web apps</li></ul>
+        <h3>Ιστοσελίδες</h3>
+        <p>Γρήγορες, σύγχρονες ιστοσελίδες που δουλεύουν σωστά σε κινητό και υπολογιστή.</p>
+        <ul><li>Εταιρικά sites & landing pages</li><li>Web εφαρμογές</li><li>Domain, hosting & SEO</li></ul>
       </article>
     </div>
   </div>
@@ -177,13 +113,12 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 
 <section id="how">
   <div class="wrap">
-    <p class="label reveal">Πώς δουλεύουμε</p>
-    <h2 class="reveal">Τέσσερα βήματα, κανένα περιττό.</h2>
+    <h2 class="reveal">Πώς δουλεύουμε</h2>
     <div class="steps">
       <div class="step reveal"><h4>Γνωριμία</h4><p>Μια δωρεάν κουβέντα για το πού βρίσκεστε και πού θέλετε να φτάσετε.</p></div>
-      <div class="step reveal"><h4>Χάρτης</h4><p>Επιλέγουμε τα εργαλεία και τις χρήσεις με τη μεγαλύτερη αξία για εσάς.</p></div>
-      <div class="step reveal"><h4>Εκπαίδευση</h4><p>Hands-on, πάνω σε πραγματικά δικά σας παραδείγματα — όχι θεωρία.</p></div>
-      <div class="step reveal"><h4>Συνοδεία</h4><p>Μένουμε δίπλα σας μέχρι η νέα συνήθεια να γίνει αυτονόητη.</p></div>
+      <div class="step reveal"><h4>Πρόταση</h4><p>Σας προτείνουμε τι θα φτιάξουμε ή τι θα μάθετε, με σαφές κόστος και χρονοδιάγραμμα.</p></div>
+      <div class="step reveal"><h4>Υλοποίηση</h4><p>Φτιάχνουμε την εφαρμογή ή το site, ή κάνουμε την εκπαίδευση πάνω σε δικά σας παραδείγματα.</p></div>
+      <div class="step reveal"><h4>Υποστήριξη</h4><p>Είμαστε διαθέσιμοι για αλλαγές, απορίες και follow-up όσο χρειάζεται.</p></div>
     </div>
   </div>
 </section>
@@ -196,8 +131,8 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
         <div class="avatar">ΑΦ</div>
         <div>
           <h3>Αθηνόδωρος Φαφούτης</h3>
-          <div class="role">Co-founder · Tech Lead</div>
-          <p>Πάνω από 10 χρόνια στην ανάπτυξη mobile εφαρμογών, με εμπειρία σε μεγάλα projects του τραπεζικού χώρου. Χρησιμοποιεί καθημερινά AI agents στη δουλειά του και ξέρει από πρώτο χέρι τι λειτουργεί — και τι όχι.</p>
+          <div class="role">Co-founder · Tech Lead & AI</div>
+          <p>15 χρόνια στο software development, με ειδίκευση στις εφαρμογές για κινητά και εμπειρία σε μεγάλα projects του τραπεζικού χώρου. Δουλεύει καθημερινά με AI agents και εργαλεία όπως το Claude και το ChatGPT, και στήνει AI agents και workflows που χρησιμοποιούν ομάδες ανάπτυξης στην καθημερινή τους δουλειά.</p>
           <a class="in" href="https://www.linkedin.com/in/athensgift/" target="_blank" rel="noopener">LinkedIn ↗</a>
         </div>
       </div>
@@ -216,8 +151,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 
 <section id="contact" class="contact">
   <div class="wrap">
-    <p class="label reveal">Επικοινωνία</p>
-    <h2 class="reveal">Έτοιμοι να κάνετε το πρώτο βήμα;</h2>
+    <h2 class="reveal">Επικοινωνία</h2>
     <p class="lead reveal">Στείλτε μας δυο γραμμές για το τι θέλετε να πετύχετε. Η πρώτη συνάντηση είναι δωρεάν.</p>
     <a class="btn btn-primary reveal" href="mailto:hello@fadak.gr">hello@fadak.gr</a>
   </div>
@@ -230,10 +164,6 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
   </div>
 </footer>
 
-<script>
-document.getElementById('y').textContent = new Date().getFullYear();
-const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .12 });
-document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-</script>
+<script src="main.js"></script>
 </body>
 </html>
